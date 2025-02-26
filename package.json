@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "test": "node --test --experimental-test-coverage **/*.ts"
+  },
   "devDependencies": {
     "@types/node": "^22.13.5"
   }
