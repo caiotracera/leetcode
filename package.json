@@ -1,8 +1,10 @@
 {
+  "type": "module",
   "scripts": {
-    "test": "node --test --experimental-test-coverage **/*.ts"
+    "test": "bun test ./questions/*.ts --coverage"
   },
   "devDependencies": {
+    "@types/bun": "^1.2.4",
     "@types/node": "^22.13.5"
   }
 }
