@@ -1,20 +1,16 @@
 name: "Run tests"
-on: [push, pull_request]
+on: [push]
 
 jobs:
-  run-tests:
-    name: "Run tests"
+  build:
+    name: build-app
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - uses: oven-sh/setup-bun@v2
-
-      - name: "Install dependencies"
-        run: bun install
-
-      - name: "Run tests"
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install bun
+        uses: oven-sh/setup-bun@v2
+      - name: Install dependencies # (assuming your project has dependencies)
+        run: bun install # You can use npm/yarn/pnpm instead if you prefer
+      - name: Run tests
         run: bun run test

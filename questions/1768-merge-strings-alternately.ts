@@ -1,5 +1,5 @@
 import assert from "node:assert";
-import { describe, it } from "node:test";
+import { describe, it } from "bun:test";
 
 function mergeAlternately(word1: string, word2: string): string {
   let output = "";
