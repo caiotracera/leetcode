@@ -1,6 +1,7 @@
 {
+  "type": "module",
   "scripts": {
-    "test": "node --test --experimental-test-coverage **/*.ts"
+    "test": "node --trace-warnings --test --experimental-test-coverage questions/*.ts"
   },
   "devDependencies": {
     "@types/node": "^22.13.5"
